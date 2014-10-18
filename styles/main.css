@@ -10,12 +10,14 @@ body {
     text-align: center;
 }
 
-.number {
-    font-weight: bold;
+form {
+    margin: 2em 0;
 }
 
-input {
-    max-width: 15em;
-    display: block;
-    margin: 1.5em auto;
+table {
+    margin: 2em 0;
+}
+
+th {
+    text-align: center;
 }
