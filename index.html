@@ -9,9 +9,43 @@
 </head>
 <body>
   <h1>Bitcoin<br>Investment<br>Calculator</h1>
-  <p>How many Bitcoins do you have?</p>
-  <input type="number" class="form-control" ng-model="somenumber" placeholder="Number of Bitcoins">
-  <p>You have <span class="number">{{ somenumber }}</span> Bitcoins&mdash;nice!</p>
+  <form role="form">
+    <label for="initial-amount">Initial investment (GBP):</label>
+    <input id="initial-amount" type="number" class="form-control" ng-model="initialAmount">
+  </form>
+  <p>Current price for 1 Bitcoin: {{ currentRate | currency : '£' }}</p>
+  <p>Investment buys: {{ bitcoinsHeld() | number : 3 }} BTC</p>
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th>New price per BTC</th>
+      <th>New amount</th>
+      <th>Profit</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>{{ 1000 | currency : '£' }}</td>
+      <td>{{ newAmount(1000) | currency : '£' }}</td>
+      <td>{{ profit(1000)  | currency : '£' }}</td>
+    </tr>
+    <tr>
+      <td>{{ 5000 | currency : '£' }}</td>
+      <td>{{ newAmount(5000) | currency : '£' }}</td>
+      <td>{{ profit(5000)  | currency : '£' }}</td>
+    </tr>
+    <tr>
+      <td>{{ 10000 | currency : '£' }}</td>
+      <td>{{ newAmount(10000) | currency : '£' }}</td>
+      <td>{{ profit(10000)  | currency : '£' }}</td>
+    </tr>
+    <tr>
+      <td>{{ 25000 | currency : '£' }}</td>
+      <td>{{ newAmount(25000) | currency : '£' }}</td>
+      <td>{{ profit(25000)  | currency : '£' }}</td>
+    </tr>
+    </tbody>
+  </table>
 
   <!-- Scripts -->
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
