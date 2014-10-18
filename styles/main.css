@@ -3,3 +3,19 @@
 * {
     font-family: Source Sans Pro, sans-serif;
 }
+
+body {
+    max-width: 24em;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.number {
+    font-weight: bold;
+}
+
+input {
+    max-width: 15em;
+    display: block;
+    margin: 1.5em auto;
+}

@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app>
 <head lang="en">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +8,14 @@
   <title>Bitcoin Investment Calculator</title>
 </head>
 <body>
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular.min.js"></script>
+  <h1>Bitcoin<br>Investment<br>Calculator</h1>
+  <p>How many Bitcoins do you have?</p>
+  <input type="number" class="form-control" ng-model="somenumber" placeholder="Number of Bitcoins">
+  <p>You have <span class="number">{{ somenumber }}</span> Bitcoins&mdash;nice!</p>
+
+  <!-- Scripts -->
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular.min.js"></script>
 </body>
 </html>
